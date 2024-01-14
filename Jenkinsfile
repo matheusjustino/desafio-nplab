@@ -4,7 +4,7 @@ pipeline {
         nodejs '21.1.0'
     }
     environment {
-		DOCKERHUB_USERNAME = 'matheusjustino'
+		DOCKERHUB_USERNAME = 'seu-usuario-do-dockerhub'
 		APP_NAME = 'desafio-npl'
         GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
 		DOCKER_IMAGE_NAME = "$DOCKERHUB_USERNAME/$APP_NAME"
@@ -50,13 +50,14 @@ pipeline {
                 }
             }
         }
-		stage('Delete Docker Images') {
-			steps {
-				script {
-					sh "docker rmi -f $DOCKER_IMAGE_NAME:$GIT_COMMIT"
-					sh "docker rmi -f $DOCKER_IMAGE_NAME:latest"
-				}
-			}
-		}
+		// Step para deletar imagens docker antigas
+		// stage('Delete Docker Images') {
+		// 	steps {
+		// 		script {
+		// 			sh "docker rmi -f $DOCKER_IMAGE_NAME:$GIT_COMMIT"
+		// 			sh "docker rmi -f $DOCKER_IMAGE_NAME:latest"
+		// 		}
+		// 	}
+		// }
     }
 }

@@ -1,8 +1,12 @@
 import { Module } from '@nestjs/common';
 
+// CONTROLLERS
 import { AppController } from './app.controller';
+
+// SERVICES
 import { AppService } from './app.service';
 
+// MODULES
 import { DatabaseModule } from './modules/database/database.module';
 import { AppConfigModule } from './modules/app-config/app-config.module';
 import { PcaModule } from './modules/pca/pca.module';

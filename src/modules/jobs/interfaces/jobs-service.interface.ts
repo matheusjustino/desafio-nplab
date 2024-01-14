@@ -1,9 +1,6 @@
+// DTOS
 import { ScheduleJobPcaCronTimeDTO } from '@/modules/pca/dtos/schedule-job-pca.dto';
-
-export interface ScheduleJobDTO {
-	jobName: string;
-	cronTime: string;
-}
+import { ScheduleJobDTO } from '../dtos/schedule-job.dto';
 
 export interface IJobsService {
 	scheduleJob(

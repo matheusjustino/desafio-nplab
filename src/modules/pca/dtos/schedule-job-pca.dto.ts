@@ -12,7 +12,7 @@ export class ScheduleJobPcaCronTimeDTO {
 	@IsOptional()
 	@IsString()
 	@Transform(({ value }) => {
-		if (!/^\*|\/\d+$/.test(value)) {
+		if (!/^\*\/\d+$/.test(value)) {
 			throw new BadRequestException('Invalid format');
 		}
 		return value;
@@ -27,7 +27,7 @@ export class ScheduleJobPcaCronTimeDTO {
 	@IsOptional()
 	@IsString()
 	@Transform(({ value }) => {
-		if (!/^(\*|\/\d+)$/.test(value)) {
+		if (!/^\*\/\d+$/.test(value)) {
 			throw new BadRequestException('Invalid format');
 		}
 		return value;
@@ -42,7 +42,7 @@ export class ScheduleJobPcaCronTimeDTO {
 	@IsOptional()
 	@IsString()
 	@Transform(({ value }) => {
-		if (!/^(\*|\/\d+)$/.test(value)) {
+		if (!/^\*\/\d+$/.test(value)) {
 			throw new BadRequestException('Invalid format');
 		}
 		return value;
@@ -57,7 +57,7 @@ export class ScheduleJobPcaCronTimeDTO {
 	@IsOptional()
 	@IsString()
 	@Transform(({ value }) => {
-		if (!/^(\*|\/\d+)$/.test(value)) {
+		if (!/^\*\/\d+$/.test(value)) {
 			throw new BadRequestException('Invalid format');
 		}
 		return value;
@@ -72,7 +72,7 @@ export class ScheduleJobPcaCronTimeDTO {
 	@IsOptional()
 	@IsString()
 	@Transform(({ value }) => {
-		if (!/^(\*|\/\d+)$/.test(value)) {
+		if (!/^\*\/\d+$/.test(value)) {
 			throw new BadRequestException('Invalid format');
 		}
 		return value;
@@ -87,7 +87,7 @@ export class ScheduleJobPcaCronTimeDTO {
 	@IsOptional()
 	@IsString()
 	@Transform(({ value }) => {
-		if (!/^(\*|\/\d+)$/.test(value)) {
+		if (!/^\*\/\d+$/.test(value)) {
 			throw new BadRequestException('Invalid format');
 		}
 		return value;

@@ -2,10 +2,12 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { SchedulerRegistry } from '@nestjs/schedule';
 import { CronJob } from 'cron';
-import {
-	IJobsService,
-	ScheduleJobDTO,
-} from './interfaces/jobs-service.interface';
+
+// INTERFACES
+import { IJobsService } from './interfaces/jobs-service.interface';
+
+// DTOS
+import { ScheduleJobDTO } from './dtos/schedule-job.dto';
 
 @Injectable()
 export class JobsService implements IJobsService {
