@@ -2,6 +2,10 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
+# Sobre o projeto
+Para a resolução do desafio eu utilizei o framework `NestJs` por ser robusto e poderoso para aplicações node. Utilizei a biblioteca `Puppeteer` para fazer a leitura das páginas e extrair os dados necessários, o orm `MikroORM` e o banco de dados `PostgreSQL`. <br/>
+Utilizei a cloud da `AWS` para criar um servidor com o `Jenkins` e utilizá-lo para criar imagens docker, enviar para o meu `Dockerhub` e então fazer o deploy em um cluster kubernetes na cloud da `DigitalOcean`. Para para me ajudar a gerenciar a criação/destruição desses recursos cloud eu utilizei o `Terraform`.
+
 # **Executando localmente**
 
 ## Instruções
