@@ -2,9 +2,12 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-## Instruções - Executando em sua máquina
+# **Executando localmente**
+
+## Instruções
 - Para executar localmente utilize `docker-compose up`
 
+# **Executando em núvem**
 
 ## Pre-setup
 
@@ -32,7 +35,7 @@ $ kubectl delete all --all -n desafio-npl
 $ terraform destroy
 ```
 
-## Após a infra ser provisionada (AWS e DigitalOcean)
+## **Após a infra ser provisionada (AWS e DigitalOcean)**
 
 -	# AWS
 -	Conecte-se ao EC2
