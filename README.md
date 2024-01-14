@@ -8,7 +8,7 @@
 
 ## Pre-setup
 
--	Criei um usuário no console ***`AWS`*** e gere suas credenciais de acesso
+-	Crie um usuário no console ***`AWS`*** e gere suas credenciais de acesso
 -	Em ***`cloud.digitalocean`*** na aba `API` crie seu token de acesso
 
 
@@ -40,7 +40,7 @@ $ terraform destroy
 -	Em `Manage Jenkins > Plugins > Available plugins` instale os plugins do `nodejs`, `docker` e `docker-build-steps`
 -	Em `Manage Jenkins > Credentials > System > Global credentials` adicione suas credenciais de acesso ao seu Dockerhub
 -	Em `Manage Jenkins > Tools` adicione `Git installations - install automatically`, `NodeJS installations - name 21.1.0 - install automatically - version 21.1.0`, `Docker installations - name docker - install automatically - Add installer - Download from docker.com`. Aplique e salve as alterações
--	Na tela Dashboard criei um item do tipo Pipeline e na seção Pipeline selecione `Pipeline script from SCM`, em SCM selecione `git` e coloque a url do repositório público `https://github.com/matheusjustino/desafio-npl.git`, em `branches to build` troque de `master` para `main`
+-	Na tela Dashboard crie um item do tipo Pipeline e na seção Pipeline selecione `Pipeline script from SCM`, em SCM selecione `git` e coloque a url do repositório público `https://github.com/matheusjustino/desafio-npl.git`, em `branches to build` troque de `master` para `main`
 -	Após finalizar a criação do novo item volte para a tela do job criado e clique em `Build Now` para gerar a imagem docker do projeto e enviar para o seu dockerhub
 
 
