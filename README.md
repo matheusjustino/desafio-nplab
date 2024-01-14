@@ -47,15 +47,16 @@ $ terraform destroy
 -	# DIGITALOCEAN
 -	Conecte-se ao cluster k8s
 -	Na pasta k8s é possível encontrar os recursos utilizados nesse projeto
--	Utilize o comando `kubectl apply -f ./<pasta_com_arquivos.yml>` para criar os recursos no cluster k8s. Em caso de erro de `namespace not found` tente execute o comando novamente.
--	O deploy da aplicação será feita no cluster e uma url de acesso será providenciada. Utilize o comando `kubectl get svc -n desafio-npl` para checar a url de acesso da aplicação. Esse processo pode levar alguns minutos.
+-	Utilize o comando `kubectl create namespace desafio-npl`
+-	Utilize o comando `kubectl apply -f ./<pasta_com_arquivos.yml>` para criar os recursos no cluster k8s. Em caso de erro de `namespace not found` tente executar o comando novamente.
+-	O deploy da aplicação será feito no cluster e uma url de acesso será providenciada. Utilize o comando `kubectl get svc -n desafio-npl` para checar a url de acesso da aplicação. Esse processo pode levar alguns minutos.
 
 
 ## **`Pontos de melhoria`**
 
 -	Automatizando o deploy
 	-	Um repositório separado com os arquivos .yml para o deploy da aplicação é uma boa prática pois pode evitar que alterações não desejadas aconteçam
-	-	Adicionar um job no Jenkins para implementar a atualização da imagem docker no arquivo yml. Dessa forma após a criação da nova image docker o arquivo do deploy seria atualizado automaticamente
+	-	Adicionar um job no Jenkins para implementar a atualização da imagem docker no arquivo yml. Dessa forma após a criação da nova imagem docker o arquivo do deploy seria atualizado automaticamente
 	-	Utilizar o ArgoCD para "ouvir" o projeto que possui os arquivos yml responsáveis pelo deploy. A cada nova alteração nesse projeto o ArgoCD irá entender que um novo deploy deve ser feito e então executar essa tarefa de forma automática
 	-	Adicionar um trigger ao job criado para a aplicação no Jenkins. Dessa forma após alguma nova alteração no código todo o processo seria disparado automaticamente
 -	Observabilidade
