@@ -10,6 +10,7 @@
 
 -	Crie um usuário no console ***`AWS`*** e gere suas credenciais de acesso
 -	Em ***`cloud.digitalocean`*** na aba `API` crie seu token de acesso
+-	Crie um arquivo `main.tf` e copie as instruções no arquivo `infra-provisioning-example.txt` e cole no arquivo terraform
 
 
 ## Setup

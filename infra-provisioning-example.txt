@@ -53,9 +53,9 @@ resource "digitalocean_kubernetes_cluster" "desafio-npl-k8s" {
 # AWS RESOURCES
 
 provider "aws" {
-	region     = ""
-	access_key = ""
-	secret_key = ""
+	region     = "" # selecione um região
+	access_key = "" # access key do seu usuário aws
+	secret_key = "" # secret key do seu usuário aws
 }
 
 // To Generate Private Key
