@@ -6,11 +6,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: desafio-npl
+      app: desafio-npl-db
   template:
     metadata:
       labels:
-        app: desafio-npl
+        app: desafio-npl-db
     spec:
       containers:
       - name: database

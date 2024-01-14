@@ -5,7 +5,7 @@ metadata:
   namespace: desafio-npl
 spec:
   selector:
-    app: desafio-npl
+    app: desafio-npl-db
   ports:
     - protocol: TCP
       port: 5432

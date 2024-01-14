@@ -63,13 +63,12 @@ $ terraform destroy
 -	Utilize o comando `kubectl apply -f ./<pasta_com_arquivos.yml>` para criar os recursos no cluster k8s. Em caso de erro de `namespace not found` tente executar o comando novamente.
 -	O deploy da aplicação será feito no cluster e uma url de acesso será providenciada. Utilize o comando `kubectl get svc -n desafio-npl` para checar a url de acesso da aplicação. Esse processo pode levar alguns minutos.
 
-
 ## **`Pontos de melhoria`**
 
 -	Automatizando o deploy
 	-	Um repositório separado com os arquivos .yml para o deploy da aplicação é uma boa prática pois pode evitar que alterações não desejadas aconteçam
 	-	Adicionar um job no Jenkins para implementar a atualização da imagem docker no arquivo yml. Dessa forma após a criação da nova imagem docker o arquivo do deploy seria atualizado automaticamente
-	-	Utilizar o ArgoCD para "ouvir" o projeto que possui os arquivos yml responsáveis pelo deploy. A cada nova alteração nesse projeto o ArgoCD irá entender que um novo deploy deve ser feito e então executar essa tarefa de forma automática
+	-	Utilizar o ArgoCD para "ouvir" o projeto que possui os arquivos yml responsáveis pelo deploy. A cada nova alteração nesse projeto o ArgoCD irá entender que um novo deploy deve ser feito e então executar essa tarefa de forma automática. Na pasta script você pode encontrar instruções para instalar o ArgoCD
 	-	Adicionar um trigger ao job criado para a aplicação no Jenkins. Dessa forma após alguma nova alteração no código todo o processo seria disparado automaticamente
 -	Observabilidade
 	-	Adicionar o Prometheus & Grafana, APM Node & ElasticSearch & Kibana, ou alguma outra ferramenta, seria um ótima adição ao projeto pois nos ajudaria a ver e entender a utilização da aplicação por parte dos usuários, além de nos ajudar a encontrar os erros e todo o trajeto até aquele ponto, incluindo os logs.
