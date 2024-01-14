@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: desafio-npl-db-deployment
+  namespace: desafio-npl
+spec:
+  selector:
+    matchLabels:
+      app: desafio-npl
+  template:
+    metadata:
+      labels:
+        app: desafio-npl
+    spec:
+      containers:
+      - name: database
+        image: postgres:14.4-alpine
+        ports:
+            - containerPort: 5432
+        env:
+          - name: POSTGRES_USER
+            valueFrom:
+              configMapKeyRef:
+                name: desafio-npl-db-envs
+                key: POSTGRES_USER
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+                name: desafio-npl-db-envs
+                key: POSTGRES_PASSWORD
+          - name: POSTGRES_DB
+            valueFrom:
+              configMapKeyRef:
+                name: desafio-npl-db-envs
+                key: POSTGRES_DB

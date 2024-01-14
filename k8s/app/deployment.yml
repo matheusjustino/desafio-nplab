@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: desafio-npl-deployment
+  namespace: desafio-npl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: desafio-npl
+  template:
+    metadata:
+      labels:
+        app: desafio-npl
+    spec:
+      containers:
+      - name: app
+        image: matheusjustino/desafio-npl:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8081
+        env:
+          - name: PORT
+            valueFrom:
+              configMapKeyRef:
+                name: desafio-npl-envs
+                key: PORT
+          - name: NODE_ENV
+            valueFrom:
+              configMapKeyRef:
+                name: desafio-npl-envs
+                key: NODE_ENV
+          - name: DB_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: desafio-npl-envs
+                key: DB_HOST
+          - name: DB_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: desafio-npl-envs
+                key: DB_PORT
+          - name: DB_USER
+            valueFrom:
+              configMapKeyRef:
+                name: desafio-npl-envs
+                key: DB_USER
+          - name: DB_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+                name: desafio-npl-envs
+                key: DB_PASSWORD
+          - name: DB_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: desafio-npl-envs
+                key: DB_NAME

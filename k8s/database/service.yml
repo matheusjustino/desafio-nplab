@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: desafio-npl-db-svc
+  namespace: desafio-npl
+spec:
+  selector:
+    app: desafio-npl
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+  type: ClusterIP
+  # type: LoadBalancer

@@ -1,0 +1,4 @@
+export enum DatabaseProviderEnum {
+	PCA_REPOSITORY = 'PCA_REPOSITORY',
+	SCHEDULE_REPOSITORY = 'SCHEDULE_REPOSITORY',
+}
